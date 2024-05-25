@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>This is a Register page</title>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<section>
+	<div class="container mt-4">
+	<div class="card">
+	<div class="card-body text-center">
+	 <div class="container mt-4 text-center">
+                                 <img style="width: 250px; height: 250px;" class="img-fluid my_profile_picture"  alt="profile" th:src="@{/img/usericon.png}">
+                                 </div>
+                                 <h1 class="text-center text-bold text-muted">Start Adding your contact.......</h1>
+	<a th:href="@{/user/add-contact}" type="submit" class="btn btn-lg btn-block btn-outline-secondary mt-2  ">Add New Contact</a>
+	</div>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script >
+
+		$(document).ready(()=>{
+			$(".item").removeClass("active");
+			$("#home-link").addClass("active");
+		});
+	</script>
+	</section>
+</body>
+</html>

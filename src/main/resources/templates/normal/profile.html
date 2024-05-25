@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>This is a Register page</title>
+</head>
+<body>
+	<section>
+   <div class="container">
+   
+   <div class="card">
+   <img alt="profileimage" class="contact_details_picture mt-4 rounded mx-auto d-block" th:src="@{'/img/'+${user.imageUrl}}">
+   <h1 class="text-center text-info" th:text="${user.name}"></h1>
+   <div class="card-body">
+   
+   <table class="table  table-hover m-3 text-success table-round" >
+									<thead>
+										<tr>
+											<th scope="col">#USERID</th>
+											<th scope="col">SCM2023<span th:text="${user.id}" ></span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+
+											<th scope="row">Email</th>
+											<td><span th:text="${user.email}"></span></td>
+										</tr>
+
+										<tr>
+											<th scope="row">Role</th>
+											<td><span th:text="${user.role}"></span></td>
+										</tr>
+
+										
+										
+										<tr>
+											<th scope="row">Account Active</th>
+											<td><span th:text="${user.enabled}"></span></td>
+										</tr>
+										
+										<tr>
+											<th scope="row">About</th>
+											<td><spa th:text="${user.about}"></span></td>
+										</tr>
+									</tbody>
+
+
+								</table>
+   
+   </div>
+   </div>
+   
+   </div>
+   
+   	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script >
+
+		$(document).ready(()=>{
+			$(".item").removeClass("active");
+			$("#view-profile").addClass("active");
+		});
+	</script>
+   
+	</section>
+</body>
+</html>
